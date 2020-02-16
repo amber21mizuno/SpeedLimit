@@ -1,0 +1,78 @@
+package cloo_4;
+
+import java.util.Scanner;
+
+public class Q_one {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/* Name: Clara Cloostermans
+		Ass Nr: 4
+		Date: February 10th 
+		Version : 2*/
+		
+		double fine = 0;
+		Scanner input = new Scanner(System.in);
+		
+	    System.out.print("Welcome \n");
+	    System.out.println("Please enter the speed limit: ");
+	    double speedlimit = input.nextInt();
+	    System.out.println("Please enter the speed of the vehicle: ");
+	    double speedvh = input.nextInt();
+	    System.out.println("Is it a construction zone? : ");
+	    String cOrSZone = input.nextLine();
+	    
+	    if (((speedvh-speedlimit)<10) && ((speedvh-speedlimit)>0))
+		      fine = 119.00;
+		else if ((speedvh-speedlimit) < 15 &&(speedvh-speedlimit) >= 10)
+		      fine = 169.00;
+		else if (((speedvh-speedlimit)<20) && ((speedvh-speedlimit)>15))
+		      fine = 219.00;
+		else if (((speedvh-speedlimit)<30) && ((speedvh-speedlimit)>20))
+		      fine = 289.00;
+		else if (((speedvh-speedlimit)>=30))
+			System.out.println("Court Mandatory. See ya in court!");
+		else
+			System.out.println("You are driving within the speed limit. Thank you for driving safely!");
+	    
+	    
+	    
+	    double finetwo = 0;
+		if (cOrSZone =="yes" || cOrSZone =="Yes" || cOrSZone=="Y") {
+	    	finetwo =  (fine * 2);
+			System.out.printf("%10.3f \n", finetwo);} 
+	    
+	    
+	    else if (cOrSZone =="no" || cOrSZone =="No" || cOrSZone=="N") { 	
+	    	finetwo = fine;
+	    	System.out.printf("%10.3f \n", "Your total fine is :", finetwo); }
+	    
+	    else 
+	    	System.out.println("Invalid input!");
+		
+		
+		
+		
+		
+		if (((speedvh-speedlimit)<10) && ((speedvh-speedlimit)>0))
+		      System.out.println("Slow down");
+		else if ((speedvh-speedlimit) < 15 &&(speedvh-speedlimit) >= 10)
+		      System.out.println("Drive with caution");
+		else if (((speedvh-speedlimit)<20) && ((speedvh-speedlimit)>15))
+		      System.out.println("You are speeding!");
+		else if (((speedvh-speedlimit)<30) && ((speedvh-speedlimit)>20))
+		      fine = 120.00;
+		else 
+			if (((speedvh-speedlimit)>=30))
+				System.out.println("You are in a Danger zone!");
+		
+	    
+	    	
+	    
+	    
+	    
+	    
+	}
+
+}
